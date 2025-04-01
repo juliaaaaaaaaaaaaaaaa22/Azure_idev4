@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha Moderno</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1><i class="fas fa-times"></i> Jogo da Velha <i class="far fa-circle"></i></h1>
+            <div class="score-board">
+                <div class="score" id="playerX">
+                    <span>Jogador X</span>
+                    <strong>0</strong>
+                </div>
+                <div class="score" id="ties">
+                    <span>Empates</span>
+                    <strong>0</strong>
+                </div>
+                <div class="score" id="playerO">
+                    <span>Jogador O</span>
+                    <strong>0</strong>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-status" id="game-status">
+            É a vez do <span class="current-player">X</span>
+        </div>
+
+        <div class="game-board" id="game-board">
+            <!-- As células serão geradas pelo JavaScript -->
+        </div>
+
+        <div class="game-controls">
+            <button class="btn" id="reset-btn">
+                <i class="fas fa-redo"></i> Reiniciar Partida
+            </button>
+            <button class="btn" id="reset-score-btn">
+                <i class="fas fa-trash-alt"></i> Zerar Placar
+            </button>
+        </div>
+
+        <div class="game-modes">
+            <h3>Modo de Jogo:</h3>
+            <div class="mode-options">
+                <button class="mode-btn active" data-mode="pvp">
+                    <i class="fas fa-users"></i> 2 Jogadores
+                </button>
+                <button class="mode-btn" data-mode="pve">
+                    <i class="fas fa-robot"></i> vs Computador
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="result-modal">
+        <div class="modal-content">
+            <h2 id="result-message">X venceu!</h2>
+            <button class="btn modal-btn" id="play-again-btn">
+                <i class="fas fa-play"></i> Jogar Novamente
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
